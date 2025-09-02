@@ -18,7 +18,6 @@ ev_backend/
 
 Backend: FastAPI
 
-Database: SQLite / PostgreSQL (for simplicity we start with SQLite in development, can move to Postgres in prod)
 
 AI Models:
 
