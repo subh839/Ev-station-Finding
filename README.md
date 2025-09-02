@@ -16,6 +16,8 @@ ev_backend/
 │── requirements.txt
 
 
+
+
 [Client - React TS]  <----HTTPS---->  [Load Balancer/Ingress]
                                          |
                                  [Backend - FastAPI (Docker)]
