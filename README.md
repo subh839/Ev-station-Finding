@@ -16,15 +16,14 @@ ev_backend/
 │── requirements.txt
 
 
+Backend: FastAPI
 
+Database: SQLite / PostgreSQL (for simplicity we start with SQLite in development, can move to Postgres in prod)
 
-[Client - React TS]  <----HTTPS---->  [Load Balancer/Ingress]
-                                         |
-                                 [Backend - FastAPI (Docker)]
-                                         |
-        +------------------------+-------+------------------------+
-        |                        |                                |
-   [Postgres DB]         [Model Artifact Storage (S3)]         [LLM Service]
-        |                         (or local volume)             (OpenAI / HF API)
-        |
-   [Monitoring / Logs]
+AI Models:
+
+Location Finder → Suggest nearest charging stations (Geospatial query).
+
+Range Predictor → Predict how far EV can go after charging (ML regression model trained on dataset).
+
+Security: JWT Authentication for users.
